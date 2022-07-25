@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+:root{
+    --Very-dark-blue: hsl(233, 47%, 7%);
+    --Dark-desaturated-blue: hsl(244, 38%, 16%);
+    --Soft-violet-: hsl(277, 64%, 61%);
+    --White: hsl(0, 0%, 100%);
+    --Slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Slightly-transparent: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .main-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Very-dark-blue);
+  }
+  
+  .container {
+    background-color: var(--Dark-desaturated-blue);
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .content-box {
+    width: 540px;
+    padding: 70px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .title {
+    color: var(--White);
+    font-size: 35px;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+  
+  .title span {
+    color: var(--Soft-violet-);
+  }
+  
+  .description {
+    color: var(--Slightly-transparent-white);
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    padding-right: 50px;
+  }
+  
+  .infomation-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .inf span {
+    display: block;
+    font-family: "Inter", sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--White);
+  }
+  
+  .inf p {
+    color: var(--Slightly-transparent);
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  
+  .img-box {
+    background-color: hsla(277, 85%, 36%, .7);
+  }
+  
+  .img-desktop {
+    display: block;
+    opacity: 0.5;
+  }
+  
+  .img-mobile {
+    display: none;
+  }
+  
+  @media (max-width: 375px) {
+    .container {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  
+    .content-box {
+      width: 350px;
+      padding: 40px;
+      text-align: center;
+      gap: 30px;
+    }
+  
+    .title {
+      font-size: 30px;
+    }
+  
+    .description {
+      padding: 0;
+    }
+  
+    .infomation-box {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  
+    .inf p {
+      margin-bottom: 15px;
+    }
+  
+    .img-box {
+      grid-row: 1;
+    }
+  
+    .img-desktop {
+      display: none;
+    }
+  
+    .img-mobile {
+      display: block;
+      width: 350px;
+      opacity: 0.5;
+    }
+  }
+
